@@ -29,20 +29,26 @@ public class twoSets{
                 System.out.println(Arrays.toString(set1));
                 System.out.println(Arrays.toString(set2));
             } else { //odd
-                set1=new int[(N+1)/2];
-                set2=new int[(N/2)];
+                set1=new int[(N/2)];
+                set2=new int[(N+1)/2];
                 
                 while((counter * N - (counter-1)*(counter)/2 )< N*(N+1)/4){
                     set1[counter]=N-counter;
                     counter++;
                 } 
                 
-                int whatev = counter;
-                while((counter * N - (counter-1)*(counter)/2 )> N*(N+1)/4){
-                    System.out.println((counter * N - (counter-1)*(counter)/2 ));
+                int whatev = counter-1;
+                set1[whatev] = 1;
+                System.out.println((counter));
+                System.out.println(Arrays.toString(set1));
+                System.out.println(set1[0] * counter - (set1[0]*(set1.length-1)/2 + set1[whatev]));
+                while((set1[0] * counter - (set1[0]*(set1.length-1)/2 + set1[whatev])) != N*(N+1)/4){
+                    System.out.println((whatev * N - (whatev-1)*(whatev)/2));
                     set1[whatev]=N-counter;
                     counter++;
+                    System.out.println(counter);
                 }
+                //set1[whatev]=N-counter-1;
                 //do set 2 here
             
             }
