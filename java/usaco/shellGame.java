@@ -1,23 +1,26 @@
 import java.io.*;
-import java.util.*;
 
 public class shellGame{
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new FileReader("shell.in"));
+        PrintWriter pw = new PrintWriter("shell.out");
 
         int swaps = Integer.parseInt(br.readLine());
-        System.out.println(swaps);
-
-        int swapCounter = 0;
-        int[] shells = new int[swaps * 3];
-        for(int i =0; i<swaps*3; i=i+3){
+        int counter = 0;
+        int ugh[] = new int[3 * swaps];
+        for(int i=0; i<ugh.length;i=i+3){
             String line = br.readLine();
-            StringTokenizer st = new StringTokenizer(line);
-
-            shells[i]=Integer.parseInt(st.nextToken());
-            shells[i+1]=Integer.parseInt(st.nextToken());
-            shells[i+2]=Integer.parseInt(st.nextToken());
+            String[] grah=line.split(" ");
+            ugh[0]=Integer.parseInt(grah[0]);
+            ugh[1]=Integer.parseInt(grah[1]);
+            ugh[2]=Integer.parseInt(grah[2]);
+            if(ugh[0]==ugh[2]){
+                counter++;
+            }else if(ugh[1]==ugh[2]){
+                counter++;
+            }
         }
-        System.out.println(Arrays.toString(shells));
+        pw.println(counter);
+        pw.close();
     }
 }
