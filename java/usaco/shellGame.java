@@ -14,8 +14,7 @@ public class shellGame{
             nums[0]=Integer.parseInt(grah[0]);
             nums[1]=Integer.parseInt(grah[1]);
             nums[2]=Integer.parseInt(grah[2]);
-            
-
+        
         }
         pw.println(counter);
         pw.close();
