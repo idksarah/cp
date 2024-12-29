@@ -2,12 +2,15 @@ import java.io.*;
 
 //2:00 pm 12/28/2024
 //left at 2:55 pm
+//back at 12:18 am!!
+//12:29 passes examp
+//12:33 passes tests!!
 
 public class cowSignal{
     public static void main(String[] args) throws IOException{
-        // BufferedReader br = new BufferedReader(new FileReader("cowsignal.in"));
-        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
-        // PrintWriter pw = new PrintWriter("cowsignal.out");
+        BufferedReader br = new BufferedReader(new FileReader("cowsignal.in"));
+        // BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter("cowsignal.out");
 
         String[] MNK =  br.readLine().split(" ");
         int originalHeight = Integer.parseInt(MNK[0]);
@@ -16,7 +19,7 @@ public class cowSignal{
         String currentPrintingRow;
 
         String[][] originalSignal = new String[originalHeight][originalWidth];
-        String[][] amplifiedSignal = new String[K * originalHeight][K * originalWidth];
+        String[][] amplifiedSignal = new String[originalHeight][K * originalWidth];
 
         for(int i =0; i< originalHeight; i++){ //reads original signal
             String[] signalRow = br.readLine().split("(?!^)");
@@ -25,49 +28,26 @@ public class cowSignal{
             }
         }
 
-        for(int row =0; row < originalSignal.length; row++){
-            int originalCharacter = 0;
-            for(int currentCharacter =0; currentCharacter < originalWidth; currentCharacter+=K){
-                for(int amplifiedCharacter=0; amplifiedCharacter < K; amplifiedCharacter++){
-                    amplifiedSignal[row][amplifiedCharacter + currentCharacter] = originalSignal[row][currentCharacter];
+        for(int row=0; row< originalSignal.length; row++){
+            int translate=0;
+            for(int originalChar = 0; originalChar < originalSignal[row].length; originalChar++){
+                for(int amplifiedChar = 0; amplifiedChar < K; amplifiedChar++){
+                    amplifiedSignal[row][amplifiedChar+translate] = originalSignal[row][originalChar];
                 }
-                originalCharacter++;
+                translate+=K;
             }
         }
 
-        for(int currentRow = 0; currentRow < K * originalSignal.length; currentRow+=K){
-            for(int amplifiedRow =0; amplifiedRow < amplifiedSignal.length; amplifiedRow++){
-                amplifiedSignal[currentRow + amplifiedRow] = amplifiedSignal[currentRow];
-            }
-        }
-
-        // for(int i =0; i< originalSignal.length; i++ ){ //iterates over each row
-        //     int originalCharacter = 0;
-        //     for(int a =0; a < originalWidth*K; a+=K){ //iterates over each original character
-        //         for(int N =0; N < K; N++){
-        //             amplifiedSignal[i][a+N] = originalSignal[i][originalCharacter];
-        //         }
-        //         originalCharacter++;
-        //     }
-        //     for(int N = 0; N < K; N++){ //vertical stretch
-        //         amplifiedSignal[i + N] = amplifiedSignal[i];
-        //     }
-        // }
-
-        // for(int i =0; i< originalHeight; i++){ //prints original signal
-        //     currentRow="";
-        //     for(int a =0; a< originalWidth; a++){
-        //         currentRow+= originalSignal[i][a];
-        //     }
-        //     System.out.println(currentRow);
-        // }
-        
-        for(int i =0; i< K* originalHeight; i++){ //prints amplified signal
+        for(int i =0; i< amplifiedSignal.length; i++){ //prints amplified signal
             currentPrintingRow="";
             for(int a =0; a< K*originalWidth; a++){
                 currentPrintingRow+= amplifiedSignal[i][a];
             }
-            System.out.println(currentPrintingRow);
+            for(int a=0; a < K; a++){
+                // System.out.println(currentPrintingRow);
+                pw.println(currentPrintingRow);
+            }
         }
+        pw.close();
     }
 }
