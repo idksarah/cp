@@ -30,6 +30,7 @@ public class numberSpiral{
 			}
 
 			System.out.println(ans);
+			s.close();
 		}
 	}
 }

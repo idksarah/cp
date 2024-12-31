@@ -55,6 +55,6 @@ public class permutations {
 
 			System.out.println(Arrays.toString(inputs).replaceAll("\\[|\\]|,",""));
 		}
+		sc.close(); 	
 	}
-		
 }	

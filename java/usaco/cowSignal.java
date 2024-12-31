@@ -5,6 +5,7 @@ import java.io.*;
 //back at 12:18 am!!
 //12:29 passes examp
 //12:33 passes tests!!
+// 1.5 hour
 
 public class cowSignal{
     public static void main(String[] args) throws IOException{
