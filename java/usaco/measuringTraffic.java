@@ -2,14 +2,15 @@ import java.io.*;
 // 12:15am 1/7/25
 //9:27 pm 1/7/25
 //passes sample 10:24
-
 //passes 2 cases......
+//8:48 1/8/25
+//1:14 am 1/10
 public class measuringTraffic {    
     public static void main(String[] args) throws IOException{
-        // BufferedReader br = new BufferedReader(new FileReader("traffic.in"));
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        // PrintWriter pw = new PrintWriter("traffic.out");
-        PrintWriter pw = new PrintWriter(System.out);
+        BufferedReader br = new BufferedReader(new FileReader("traffic.in"));
+        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter("traffic.out");
+        // PrintWriter pw = new PrintWriter(System.out);
 
         int N = Integer.parseInt(br.readLine());
         String[][] segments = new String[N][3];
@@ -28,43 +29,36 @@ public class measuringTraffic {
         
         for(int a =N-1; a > -1; a--){ // prior
             if(segments[a][0].equals("on")){
-                // System.out.println("on");
                 current[0] -= Integer.parseInt(segments[a][2]);
                 current[1] -= Integer.parseInt(segments[a][1]);
+                current[0] = Math.max(0, current[0]);
             } else if(segments[a][0].equals("none")){
-                // System.out.println("none");
-                current[0] = Math.max(Integer.parseInt(segments[a][1]), current[0]);
-                current[1] = Math.min(Integer.parseInt(segments[a][2]), current[1]);
+                current[0] = Math.max(Integer.parseInt(segments[a][1]), current[0]); 
+                current[1] = Math.min(Integer.parseInt(segments[a][2]), current[1]); // hmmmm
             } else {
-                // System.out.println("off");
-                current[0] += Integer.parseInt(segments[a][2]);
-                current[1] += Integer.parseInt(segments[a][1]);
+                current[0] += Integer.parseInt(segments[a][1]); //had 2 here and 1 in the other
+                current[1] += Integer.parseInt(segments[a][2]);
             }
-            // System.out.println(Arrays.toString(current));
         }
-        // System.out.println(Arrays.toString(current));
         pw.print(current[0] + " ");
         pw.println(current[1]);
         current[0] = 0;
         current[1] = 1001;
         for(int a =0; a < N; a ++){ // post
             if(segments[a][0].equals("on")){
-                // System.out.println("on");
-                current[0] += Integer.parseInt(segments[a][2]);
-                current[1] += Integer.parseInt(segments[a][1]);
+                current[0] += Integer.parseInt(segments[a][1]); //had 2 here and 1 in the other idk why that matters
+                current[1] += Integer.parseInt(segments[a][2]);
             } else if(segments[a][0].equals("none")){
-                // System.out.println("none");
                 current[0] = Math.max(Integer.parseInt(segments[a][1]), current[0]);
                 current[1] = Math.min(Integer.parseInt(segments[a][2]), current[1]);
             } else {
-                // System.out.println("off");
                 current[0] -= Integer.parseInt(segments[a][2]);
                 current[1] -= Integer.parseInt(segments[a][1]);
+                current[0] = Math.max(0, current[0]);
             }
         }
-        // System.out.println(Arrays.toString(current));
-        // pw.print(current[0] + " ");
-        // pw.println(current[1]);
-        // pw.close();
+        pw.print(current[0] + " ");
+        pw.println(current[1]);
+        pw.close();
     }
 }
