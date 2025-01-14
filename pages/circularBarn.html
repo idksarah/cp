@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circularBarn solution</title>
+</head>
+<body>
+    <p>problem: </p>
+    <p>Being a fan of contemporary architecture, Farmer John has built a new barn in the shape of a perfect circle. Inside, the barn consists of a ring of n
+        rooms, numbered clockwise from 1…n
+        around the perimeter of the barn (3≤n≤1,000
+       ). Each room has doors to its two neighboring rooms, and also a door opening to the exterior of the barn.</p>
+    <p>
+        Farmer John wants exactly ri
+ cows to end up in each room i
+ (1≤ri≤100
+). To herd the cows into the barn in an orderly fashion, he plans to unlock the exterior door of a single room, allowing the cows to enter through that door. Each cow then walks clockwise through the rooms until she reaches a suitable destination. Farmer John wants to unlock the exterior door that will cause his cows to collectively walk a minimum total amount of distance. Please determine the minimum total distance his cows will need to walk, if he chooses the best such door to unlock. The distance walked by a single cow is the number of interior doors through which she passes.
+    </p>
+    <p>solution</p>
+    <ol>
+        <li>separate input into an array, eg [4,7,8,6,4]</li>
+        <li>iterate through every possibility of the first room, ie with 4, 7, 8, 6, and 4, and calculcate the distance from there. the way this is done is by multiplying the number on the right--since the cows r going clockwise--by an incrementing number, 1,2,3,4, etc., and summing those values. when you reach the end of the array, just wrap around. ie, if we start at room 7, room 8 would be multiplied by 1, since that is the number of doors a cow would have to pass through to get there, room 6 by 2, room 4 by 3, and the final room 4 by 4.</li>
+    </ol>
+</body>
+</html>
