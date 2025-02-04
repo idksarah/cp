@@ -33,10 +33,9 @@ public class bovineGenomics {
                 normal[a][b] = genomes.charAt(b);
             }
         }
-        // System.out.println(Arrays.deepToString(normal));
 
         int count = 0;
-        for(int a =0; a < M-2; a ++){ // assumes that (i,j,k) = (j,i,k)
+        for(int a =0; a < M-2; a ++){
             for(int b = a + 1; b < M; b++){
                 for(int c = b + 1; c < M; c ++){
                     HashSet<String> spottyThrees = new HashSet<>();
@@ -45,13 +44,10 @@ public class bovineGenomics {
                         spottyThrees.add(spotty[z][a]+""+spotty[z][b]+""+spotty[z][c]);
                         normalThrees.add(normal[z][a]+""+normal[z][b]+""+normal[z][c]);
                     }
-                    System.out.println("spotty" + a + " " + spottyThrees);
-                    System.out.println("normal" + a + " " + normalThrees);
                     spottyThrees.retainAll(normalThrees);
                     if(spottyThrees.isEmpty()){
                         count++;
                     }
-                    System.out.println(count);
                 }
             }
         }

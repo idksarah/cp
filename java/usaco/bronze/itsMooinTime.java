@@ -26,7 +26,6 @@ public class itsMooinTime {
                     eunuchs.put(longs[a], (long)a);
                 }
             } else {
-                System.out.println("heeeeeeeeeeeey");
                 Long tempIndex = eunuchs.get(longs[a]);
                 eunuchs.remove(longs[a]);
                 dupes.put(longs[a], tempIndex);
