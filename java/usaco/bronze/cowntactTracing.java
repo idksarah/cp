@@ -3,6 +3,8 @@ import java.io.*;
 
 // 6:52 pm 2/16
 // 4:45 pm 2/18
+// 10:50 pm 2/19
+// 4:50 pm
 
 public class cowntactTracing {
     public static void main(String[] args) throws IOException{
@@ -12,6 +14,10 @@ public class cowntactTracing {
 
         /*
         -if a sick cow appears AGAIN in the log, and the cow they shake hands with IS NOT SICK, limit K to the time between the initial shake and this shake
+
+        for every sick cow
+            boolean firstInteracion = -1
+
 
         first time a sick cow apears in the log:
             if the cow they shake hands with is sick:
@@ -43,7 +49,6 @@ public class cowntactTracing {
             if cows.get(a) == 1: # if it's a sick cow
                 int firstInteraction = -1
                 boolean patientZero = false
-                hashset<> sickShook = <>
                 for int b < numOfInteractions
                     int left = log[b][1]
                     int right = log[b][2]
@@ -52,21 +57,19 @@ public class cowntactTracing {
                             y 
                         else:
                             z = math.max(b - firstInteraction)
-
-                    else:
+                 else:
 
                         if sickcows.contains left:
                             if firstInteraction == -1:
                                 if sickcows.contains right:
                                     for int c < b:
-                                        if sickCows.contains(log[c][0]) || sickCows.contains(log[c][1]):
-                                            not patient zero
+                                        if ! sickCows.contains(log[c][0]) || !sickCows.contains(log[c][1]):
+                                            
                                         else:
                                             patientZero = true
                                             firstInteraction = b
-                                            sickShook.add(b)
                                 else:
-                                    not patient zero
+                                
                         else:
                             if sickcows.contains right:
 

@@ -3,6 +3,7 @@ import java.util.*;
 
 // 7:15 pm 2/5/25
 // 8:23 pm 2/10
+// 5:10 pm
 public class appleDivision {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -14,26 +15,44 @@ public class appleDivision {
         for(int i =0; i < N; i++){
              inputs[i] = Long.parseLong(st.nextToken());
         }
-        long[][][] tree = new long[N+1][(int)Math.pow(2,N)][2];
-        for(int a = 1; a < N + 1; a++){
-            for(int b = 0; b < Math.pow(2, a + 1); b+=2){
-                // point 1
-                tree[a][b][0] = inputs[a] + tree[a - 1][(int)Math.ceil(b / 2)][0];
-                tree[a][b][1] = tree[a - 1][(int)Math.ceil(b / 2)][0];
-                // point 2 
-                tree[a][b + 1][0] = inputs[a] + tree[a - 1][(int)Math.ceil((b + 1) / 2)][0];
-                tree[a][b + 1][1] = tree[a - 1][(int)Math.ceil((b + 1) / 2)][0];
-            }
+
+        int totalIndices = 0;
+        for(int i = 1; i < inputs.length + 1; i++){
+            totalIndices += Math.pow(2, i);
         }
-        for (int i = 0; i <= N; i++) {
-            for (int j = 0; j < (1 << N); j++) {
-                System.out.print("tree[" + i + "][" + j + "] = { ");
-                for (int k = 0; k < 2; k++) {
-                    System.out.print(tree[i][j][k] + (k < 1 ? ", " : ""));
-                }
-                System.out.println(" }");
+        long[][] tree = new long[totalIndices][2];
+
+        long first = inputs[0];
+        tree[0] = new long[]{first, 0}; 
+        tree[1] = new long[]{0, first};
+        
+        int lastOffset = 2;
+        long currOffset = 0;
+        for(int a = 0; a < inputs.length; a++){
+            currOffset += Math.pow(2,(long)a);
+            for(int b = 0; b < Math.pow(2,a); b++){
+                tree[lastOffset + b] = new long[]{tree[lastOffset + (int)b/2][0] + inputs[a], tree[lastOffset + (int)b/2][1]};
+                tree[lastOffset + b + 1] = new long[]{tree[lastOffset + (int)b/2][0], tree[lastOffset + (int)b/2][1] + inputs[a]};
             }
+            lastOffset += Math.pow(2,(long)a);
         }
+        /*
+        input = [3,2,7]
+        arraylist [][]
+        arraylist[0][3,0]
+        arraylist[1][0,3]
+        int lastoffset += 2^ a
+         * for a < length
+         *      int curoffset += 2^ a
+         *      for b < 2 ^ a
+         *          arraylist[offset +b][0] = arraylist[lastoffset + (int)(b/2)][0] + input[a]
+         *          arraylist[offset +b][1] = arraylist[lastoffset + (int)(b/2)][1]
+         * 
+         *          arraylist[offset +b+1][0] = arraylist[lastoffset + (int)(b/2)][0]
+         *          arraylist[offset +b+1][1] = arraylist[lastoffset + (int)(b/2)][1]  + input[a] 
+         *          
+         *      lastoffset += 2 ^ a  
+         */     
         
     }
 }
