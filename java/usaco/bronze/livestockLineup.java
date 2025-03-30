@@ -2,32 +2,39 @@ import java.io.*;
 import java.util.*;
 
 // 12:27 3/18/25
+// 4:57 pm 3/21
+// 6:30pm 3/29
 
 public class livestockLineup {
+    static String[][] constraints;
+    static ArrayList goodCows;
     public static void main (String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        HashMap<Integer, String> cows = new HashMap<>();
+        LinkedHashMap<String, Integer> alphaCowMap = new LinkedHashMap<>();
 
-        cows.put(0, "Beatrice");
-        cows.put(1, "Bella");
-        cows.put(2, "Belinda");
-        cows.put(3, "Bessie");
-        cows.put(4, "Betsy");
-        cows.put(5, "Blue");
-        cows.put(6, "Buttercup");
-        cows.put(7, "Sue");
-        
-        int N = Integer.parseInt(st.nextToken());
-        int[][] constraints = new int[N][2];
+        String[] cows = {"Beatrice", "Belinda", "Bella", "Bessie", "Betsy", "Blue", "Buttercup", "Sue"};
+        for (int i = 0; i < cows.length; i++) {
+            alphaCowMap.put(cows[i], i);
+        }
 
+        LinkedHashMap<String, Integer> testCowMap = new LinkedHashMap<>();
+        int N = Integer.parseInt(br.readLine());
         for(int i =0; i < N; i++){
             String[] instructions = br.readLine().split(" ");
-            constraints[i][0] = cows.(instructions[0]);
-            constraints[i][1] = cows.containsKey(instructions[5]);
+            constraints[i][0] = instructions[0];
+            constraints[i][1] = instructions[1];
         }
+        // for (int i = 0; i < constraints.length; i++) {
+        //     System.out.println(Arrays.toString(constraints[i]));
+        // }
+        // ArrayList initial = new ArrayList<>();
+        // initial.add(0);
+        // recurse(initial);
+        // for(int i = 0; i < goodCows.size(); i++){
+        //     System.out.println(intToCows.get(goodCows.get(i)));
+        // }
+    
     }
-
-    // public static 
 }
