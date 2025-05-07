@@ -1,10 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 7:15 pm 2/5/25
-// 8:23 pm 2/10
-// 5:10 pm
-// 12:15 pm 3/17
 public class appleDivision {
     static long N;
     static long min;

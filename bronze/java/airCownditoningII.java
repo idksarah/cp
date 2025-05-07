@@ -1,12 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 1 hour 3/10 ?
-// 11:28 pm 3/11/25
-// 12:25 am 3/12/25
-// 11:08 pm 3/13
-// 11:41 fuckin 0 vs 1 indexing
-
 public class airCownditoningII {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

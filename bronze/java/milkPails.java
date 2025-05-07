@@ -1,9 +1,5 @@
 import java.io.*;
 
-//12:59 pm 12/28/24
-//1:20 pm passed example case
-//1:47 reworked and passed all tests
-
 public class milkPails{
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("pails.in"));

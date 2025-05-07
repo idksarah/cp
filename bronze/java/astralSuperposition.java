@@ -2,8 +2,6 @@
 import java.io.*;
 import java.util.*;
 
-// 12:18 pm 1/25/2025
-
 public class astralSuperposition {
     public static void checkSky(BufferedReader br) throws IOException{
         String[] NAB = br.readLine().split(" ");

@@ -1,12 +1,6 @@
 import java.io.*;
 import java.util.Arrays;
 
-//6:00 pm 12/31
-//6:30
-// 1:08 pm 1/1
-//pases sample at 1:54
-//pases 1:56
-
 public class bovineShuffle {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("shuffle.in"));

@@ -1,10 +1,5 @@
 import java.io.*;
-// 12:15am 1/7/25
-//9:27 pm 1/7/25
-//passes sample 10:24
-//passes 2 cases......
-//8:48 1/8/25
-//1:14 am 1/10
+
 public class measuringTraffic {    
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("traffic.in"));

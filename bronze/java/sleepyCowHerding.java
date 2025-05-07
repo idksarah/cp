@@ -1,7 +1,5 @@
 import java.io.*;
 
-//12:09am 1/7/25
-
 public class sleepyCowHerding {    
     public static void main(String[] args) throws IOException{
         // BufferedReader br = new BufferedReader(new FileReader("herding.in"));

@@ -1,11 +1,6 @@
 import java.io.*;
 import java.util.Arrays;
 
-//2:06 pm 1/1/2025 !!!
-//fml 3:05
-//passes test case 4:33 1/3/25
-//break at 5
-//back at 5:42
 public class bucketList {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("blist.in"));

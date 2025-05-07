@@ -2,10 +2,6 @@
 import java.io.*;
 import java.util.*;
 
-// 11:15 am 1/25/2025
-// 12:16 pm
-// 9:15 pm 1/27/25
-
 public class itsMooinTime {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

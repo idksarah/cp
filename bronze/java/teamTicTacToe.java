@@ -1,11 +1,6 @@
 import java.io.*;
 import java.util.*;
-// 12:11 am 1/15/2025
-// passes sample 12:29
-// fails tests 2-4 and 10. im sleepe. good night
-//5:07 1/15/25
-//12:34 am 1/17
-//1:13 am
+
 public class teamTicTacToe {
     private static void checkLine(char a, char b, char c, Set<Character> soloWins, Set<String> teamWins){
         if(a == b && b == c){

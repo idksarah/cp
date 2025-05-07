@@ -1,10 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 12:53 pm 2/2/25
-// first test case 1:12; 60%
-// 1:27
-
 public class loadBalancing{
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("balancing.in"));

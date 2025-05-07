@@ -1,6 +1,3 @@
-// 5:30 pm 2/12/2025
-// 6:24 pm :3
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

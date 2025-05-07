@@ -1,13 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 12:50 pm 12/30
-//break at 2:26
-//fuckjs up (2,3) for some reason
-//back at 6:01 
-//passed sample 6:33
-// done 6:34
-
 public class cowGymnastics {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("gymnastics.in"));

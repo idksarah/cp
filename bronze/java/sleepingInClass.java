@@ -1,11 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 5:32 pm 2/3/25
-// 8:31 pm
-// 9:09 sample
-// passes 10/11 idc
-
 public class sleepingInClass {    
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

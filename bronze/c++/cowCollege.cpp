@@ -1,6 +1,3 @@
-// 11:35 am 5/3/25
-// 12:05 pm
-
 #include <cstdio>
 #include <vector>
 #include <set>

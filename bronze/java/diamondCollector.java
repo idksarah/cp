@@ -1,12 +1,6 @@
 
 import java.io.*;
 
-//12:45 am 12/29/2024
-//slepe at 1:13 am
-//back at 12:52 pm!!
-// passes samples case  1:17 pm
-// passes all at !! 1:18 
-// total time = 1 hour
 public class diamondCollector {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("diamond.in"));

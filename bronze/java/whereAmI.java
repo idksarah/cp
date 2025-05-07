@@ -1,10 +1,6 @@
 import java.io.*;
 import java.util.HashSet;
 
-// 1:24 am 1/24/25
-// 5:47 pm 3/6/25
-// 1:11 pm 3/9/25
-
 public class whereAmI {    
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("whereami.in"));

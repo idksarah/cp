@@ -1,9 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 10:40 4/28/25
-// passes samples 11:08
-
 public class kayaking {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

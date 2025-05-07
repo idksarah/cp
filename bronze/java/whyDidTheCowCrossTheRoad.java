@@ -1,14 +1,6 @@
 import java.io.*;
 import java.util.*;
-// 3:20 pm 1/18/25
-// 3:28
-// 12:35 pm 1/19
-// passed 1st 1:22
-// 12:55 am 1/25
-// 1:23 am
-// 12:12 am
-// 10:40 am 2/1 oh my goood
-// 11:13 am i hate my life
+
 public class whyDidTheCowCrossTheRoad {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("circlecross.in"));

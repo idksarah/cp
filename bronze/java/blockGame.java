@@ -1,7 +1,3 @@
-//1:00 pm 12/26/26
-//1st run 3:42
-//2nd 3:48
-
 import java.io.*;
 import java.util.Scanner;
 

@@ -1,11 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 12:27 3/18/25
-// 4:57 pm 3/21
-// 6:30pm 3/29
-// 4/15
-
 public class livestockLineup {
     static String[][] constraints;
     static ArrayList<String> alphaCows; 

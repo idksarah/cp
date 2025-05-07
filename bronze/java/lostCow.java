@@ -1,9 +1,5 @@
 import java.io.*;
 
-//3:28 pm 1/5/2025
-//YOOOOO passes first 3:54
-// 4 : 17 :33333
-
 public class lostCow {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("lostcow.in"));

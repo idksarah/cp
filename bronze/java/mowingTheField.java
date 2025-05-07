@@ -2,12 +2,6 @@
 import java.io.*;
 import java.util.*;
 
-// 1:17 am 1/17/25!!
-// sleepe 1:49
-// 1:17 pm 1/18/25
-// first passed 2:42;; passed 7 cases :(
-// passes all 2:48 :3
-
 public class mowingTheField {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("mowing.in"));

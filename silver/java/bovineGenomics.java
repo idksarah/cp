@@ -2,10 +2,6 @@ import java.io.*;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-// 11:27 am
-// sample case 12:25 pm
-// passed 12:27 
-
 public class bovineGenomics {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("cownomics.in"));

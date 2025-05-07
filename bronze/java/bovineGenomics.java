@@ -1,10 +1,5 @@
 import java.io.*;
 
-//1:47 pm
-//inputted till 2:16
-//3:06 passes 1st test
-//passed at 3:07
-
 public class bovineGenomics {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("cownomics.in"));

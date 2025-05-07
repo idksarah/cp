@@ -1,9 +1,5 @@
 import java.io.*;
 
-// 2:37 pm 1/5/2025
-//passes first case 3:04
-//passed 3:06
-
 public class triangles {
     public static void main(String[] args) throws IOException{
         // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

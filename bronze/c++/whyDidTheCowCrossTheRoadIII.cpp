@@ -3,9 +3,6 @@
 #include <algorithm>
 using namespace std;
 
-// 7/10 6:34 5/2
-// 11:27
-
 int main() {
     int n = 0;
     long time = 0;

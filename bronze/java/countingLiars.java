@@ -1,18 +1,5 @@
 import java.io.*;
 
-//1:47 pm 12/29/24
-//break 2:26
-//back at 4:44 lol
-//left at 5 
-// back at 6:10
-// passes sample cases 6:12
-//giving up 6:21 lol
-//FUCK IM BACK 6:25
-//fuuuuuuuuuuuck
-//giving up at 7:26
-//back at 12:27 pm
-//12: 36 holy fuck
-
 public class countingLiars{
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

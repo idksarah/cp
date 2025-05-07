@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// passes sample case 5:11 PM 4/22/25
 // ts loses solutions somewhere IDK like for 88 as solution it returns 85 or for answer == 60 it reutnrs 58 idk bru
 
 public class backAndForth {

@@ -1,12 +1,6 @@
 import java.io.*;
 import java.util.Arrays;
 
-// 1:19am 1/10/25
-// sleepy at 1:50 am
-// 10:48 am 1/11/25
-//9:47pm 1/12
-//passes test cse 11:09
-//passed all cases 11:21
 
 public class lifeGuards {
     public static void main(String[] args) throws IOException{

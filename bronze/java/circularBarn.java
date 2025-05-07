@@ -1,9 +1,5 @@
 import java.io.*;
 
-// 8:02 pm 1/13/25
-// passes sample 8:40
-// passes 8:41
-
 public class circularBarn {
     public static void main(String[] args) throws IOException{
         // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

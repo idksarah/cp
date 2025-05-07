@@ -1,10 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 10:00 4/24/25
-// example case 8:34 4/25/25 //guess we gotta sort...
-// i get the math now!! 4:31 4/27
-
 public class playingInACasino {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

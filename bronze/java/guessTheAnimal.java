@@ -1,12 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// thinking 5:35
-// 6:30
-// 6:37 pm 2/15/25
-// passes sample 6:30 2/16
-// 6:38 pm
-
 public class guessTheAnimal {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("guess.in"));
